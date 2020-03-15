@@ -2247,6 +2247,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Show",
@@ -39025,24 +39026,26 @@ var render = function() {
     "div",
     { staticClass: "flex flex-col items-center" },
     [
-      _c("div", { staticClass: "relative mb-8 z-10" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "absolute flex items-center bottom-0 left-0 -mb-8 ml-12 z-20"
-          },
-          [
-            _vm._m(1),
+      _vm.loadingUser || !_vm.user
+        ? _c("p", [_vm._v("Loading ...")])
+        : _c("div", { staticClass: "relative mb-8 z-10" }, [
+            _vm._m(0),
             _vm._v(" "),
-            _c("p", { staticClass: "text-2xl text-gray-100 ml-4" }, [
-              _vm._v(_vm._s(_vm.user.data.attributes.name))
-            ])
-          ]
-        )
-      ]),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "absolute flex items-center bottom-0 left-0 -mb-8 ml-12 z-20"
+              },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-2xl text-gray-100 ml-4" }, [
+                  _vm._v(_vm._s(_vm.user.data.attributes.name))
+                ])
+              ]
+            )
+          ]),
       _vm._v(" "),
       _vm.loadingPosts || !_vm.posts
         ? _c("p", [_vm._v("Posts loading ...")])
@@ -54792,8 +54795,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/alex_neo/Documents/sites/facebook-clone/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/alex_neo/Documents/sites/facebook-clone/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/alex_neo_68/Documents/sites/fb-clone/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/alex_neo_68/Documents/sites/fb-clone/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

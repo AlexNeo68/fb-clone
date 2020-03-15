@@ -1,6 +1,7 @@
 <template>
     <div class="flex flex-col items-center">
-        <div class="relative mb-8 z-10">
+        <p v-if="loadingUser||!user">Loading ...</p>
+        <div v-else class="relative mb-8 z-10">
             <div class="w-100 h-64 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1583934555852-537536e49071?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2119&q=80" alt="User profile photo" class="object-cover w-full">
             </div>
