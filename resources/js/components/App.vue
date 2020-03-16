@@ -15,8 +15,20 @@
 <script>
     import Nav from "./Nav";
     import Sidebar from "./Sidebar";
+
     export default {
         name: 'App',
-        components: { Nav, Sidebar }
+        components: { Nav, Sidebar },
+        mounted(){
+            this.$store.dispatch('fetchAuthUser');
+        },
+        created() {
+            this.$store.dispatch('setPageTitle', this.$route.meta.title);
+        },
+        watch: {
+            $route(to, from){
+                this.$store.dispatch('setPageTitle', to.meta.title);
+            }
+        }
     }
 </script>
